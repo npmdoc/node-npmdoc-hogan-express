@@ -61,12 +61,105 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.hogan-express">module hogan-express</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hogan-express.hogan-express">
+            function <span class="apidocSignatureSpan"></span>hogan-express
+            <span class="apidocSignatureSpan">(path, opt, fn)</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.hogan-express" id="apidoc.module.hogan-express">module hogan-express</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.hogan-express.hogan-express" id="apidoc.element.hogan-express.hogan-express">
+        function <span class="apidocSignatureSpan"></span>hogan-express
+        <span class="apidocSignatureSpan">(path, opt, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hogan-express = function (path, opt, fn) {
+  var lambda, lambdas, name, partials, _fn;
+  ctx = this;
+  partials = opt.settings.partials || {};
+  if (opt.partials) {
+    partials = __extends(partials, opt.partials);
+  }
+  lambdas = opt.settings.lambdas || {};
+  if (opt.lambdas) {
+    lambdas = __extends(lambdas, opt.lambdas);
+  }
+  delete lambdas[&#x27;prototype&#x27;];
+  delete lambdas[&#x27;__super__&#x27;];
+  opt.lambdas = {};
+  _fn = function(name, lambda) {
+    return opt.lambdas[name] = function() {
+      var lcontext;
+      lcontext = this;
+      return function(text) {
+        var lctx;
+        lctx = {};
+        if (opt._locals) {
+          lctx = __extends(lctx, opt._locals);
+        }
+        lctx = __extends(lctx, lcontext);
+        return lambda(hogan.compile(text).render(lctx));
+      };
+    };
+  };
+  for (name in lambdas) {
+    lambda = lambdas[name];
+    _fn(name, lambda);
+  }
+  return renderPartials(partials, opt, function(err, partials) {
+    var layout;
+    if (err) {
+      return fn(err);
+    }
+    layout = opt.layout === void 0 ? opt.settings.layout : layout = opt.layout;
+    return renderLayout(layout, opt, function(err, layout) {
+      return read(path, opt, function(err, str) {
+        var customTag, customTags, result, tag, tmpl, _i, _len;
+        if (err) {
+          return fn(err);
+        }
+        try {
+          tmpl = hogan.compile(str, opt);
+          result = tmpl.render(opt, partials);
+          customTags = str.match(/({{#yield-\w+}})/g);
+          if (layout) {
+            if (customTags) {
+              for (_i = 0, _len = customTags.length; _i &#x3c; _len; _i++) {
+                customTag = customTags[_i];
+                tag = customTag.match(/{{#([\w-]+)}}/)[1];
+                if (tag) {
+                  opt[tag] = customContent(str, tag, opt, partials);
+                }
+              }
+            }
+            opt[&#x22;yield&#x22;] = result;
+            tmpl = hogan.compile(layout, opt);
+            result = tmpl.render(opt, partials);
+          }
+          return fn(null, result);
+        } catch (_error) {
+          err = _error;
+          return fn(err);
+        }
+      });
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 </div>
 

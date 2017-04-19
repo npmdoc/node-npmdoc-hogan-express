@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/vol4ok/hogan-express"
-
-    >hogan-express (v0.5.2)</a>
+    <a href="https://github.com/vol4ok/hogan-express">hogan-express (v0.5.2)</a>
 </h1>
 <h4>Mustache template engine for express 3.x. Support partials and layout</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.hogan-express">module hogan-express</a><ol>
 
@@ -96,8 +89,8 @@
   if (opt.lambdas) {
     lambdas = __extends(lambdas, opt.lambdas);
   }
-  delete lambdas[&#x27;prototype&#x27;];
-  delete lambdas[&#x27;__super__&#x27;];
+  delete lambdas['prototype'];
+  delete lambdas['__super__'];
   opt.lambdas = {};
   _fn = function(name, lambda) {
     return opt.lambdas[name] = function() {
@@ -136,7 +129,7 @@
           customTags = str.match(/({{#yield-\w+}})/g);
           if (layout) {
             if (customTags) {
-              for (_i = 0, _len = customTags.length; _i &#x3c; _len; _i++) {
+              for (_i = 0, _len = customTags.length; _i &lt; _len; _i++) {
                 customTag = customTags[_i];
                 tag = customTag.match(/{{#([\w-]+)}}/)[1];
                 if (tag) {
@@ -144,7 +137,7 @@
                 }
               }
             }
-            opt[&#x22;yield&#x22;] = result;
+            opt["yield"] = result;
             tmpl = hogan.compile(layout, opt);
             result = tmpl.render(opt, partials);
           }
@@ -169,3 +162,4 @@
     ]
 </div>
 </div>
+</body></html>

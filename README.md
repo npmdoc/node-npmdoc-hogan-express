@@ -1,9 +1,14 @@
-# api documentation for  [hogan-express (v0.5.2)](https://github.com/vol4ok/hogan-express)  [![npm package](https://img.shields.io/npm/v/npmdoc-hogan-express.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-hogan-express) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-hogan-express.svg)](https://travis-ci.org/npmdoc/node-npmdoc-hogan-express)
+# npmdoc-hogan-express
+
+#### api documentation for  [hogan-express (v0.5.2)](https://github.com/vol4ok/hogan-express)  [![npm package](https://img.shields.io/npm/v/npmdoc-hogan-express.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-hogan-express) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-hogan-express.svg)](https://travis-ci.org/npmdoc/node-npmdoc-hogan-express)
+
 #### Mustache template engine for express 3.x. Support partials and layout
 
-[![NPM](https://nodei.co/npm/hogan-express.png?downloads=true)](https://www.npmjs.com/package/hogan-express)
+[![NPM](https://nodei.co/npm/hogan-express.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/hogan-express)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-hogan-express/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-hogan-express_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-hogan-express/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-hogan-express/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-hogan-express/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-hogan-express/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-hogan-express/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-hogan-express/build/screenCapture.npmPackageListing.svg)
 
@@ -17,8 +22,7 @@
 
 {
     "author": {
-        "name": "Andrew Volkov",
-        "email": "hello@vol4ok.net"
+        "name": "Andrew Volkov"
     },
     "bugs": {
         "url": "https://github.com/vol4ok/hogan-express/issues"
@@ -53,13 +57,11 @@
     "main": "hogan-express.js",
     "maintainers": [
         {
-            "name": "vol4ok",
-            "email": "admin@vol4ok.net"
+            "name": "vol4ok"
         }
     ],
     "name": "hogan-express",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+ssh://git@github.com/vol4ok/hogan-express.git"
@@ -70,16 +72,6 @@
     "version": "0.5.2"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module hogan-express](#apidoc.module.hogan-express)
-
-
-
-# <a name="apidoc.module.hogan-express"></a>[module hogan-express](#apidoc.module.hogan-express)
 
 
 

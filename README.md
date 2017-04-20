@@ -1,6 +1,6 @@
 # npmdoc-hogan-express
 
-#### api documentation for  [hogan-express (v0.5.2)](https://github.com/vol4ok/hogan-express)  [![npm package](https://img.shields.io/npm/v/npmdoc-hogan-express.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-hogan-express) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-hogan-express.svg)](https://travis-ci.org/npmdoc/node-npmdoc-hogan-express)
+#### api documentation for  hogan-express (v0.5.2)  [![npm package](https://img.shields.io/npm/v/npmdoc-hogan-express.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-hogan-express) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-hogan-express.svg)](https://travis-ci.org/npmdoc/node-npmdoc-hogan-express)
 
 #### Mustache template engine for express 3.x. Support partials and layout
 
@@ -21,30 +21,17 @@
 ```json
 
 {
-    "author": {
-        "name": "Andrew Volkov"
-    },
-    "bugs": {
-        "url": "https://github.com/vol4ok/hogan-express/issues"
-    },
-    "dependencies": {
-        "hogan.js": ">=2.0.0"
-    },
+    "name": "hogan-express",
+    "version": "0.5.2",
     "description": "Mustache template engine for express 3.x. Support partials and layout",
-    "devDependencies": {
-        "cheerio": "~0.12.2",
-        "coffee-script": "1.x.x",
-        "colors": "0.6.x",
-        "expect.js": "~0.2.0",
-        "express": "~3.4.0",
-        "supertest": "~0.8.0"
+    "main": "hogan-express.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "directories": {},
-    "dist": {
-        "shasum": "52994ac842a423d4e1075181b9a3247de36950eb",
-        "tarball": "https://registry.npmjs.org/hogan-express/-/hogan-express-0.5.2.tgz"
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:vol4ok/hogan-express.git"
     },
-    "homepage": "https://github.com/vol4ok/hogan-express",
     "keywords": [
         "mustache",
         "hogan",
@@ -53,23 +40,19 @@
         "template",
         "engine"
     ],
+    "author": "Andrew Volkov <hello@vol4ok.net>",
     "license": "MIT",
-    "main": "hogan-express.js",
-    "maintainers": [
-        {
-            "name": "vol4ok"
-        }
-    ],
-    "name": "hogan-express",
-    "optionalDependencies": {},
-    "repository": {
-        "type": "git",
-        "url": "git+ssh://git@github.com/vol4ok/hogan-express.git"
+    "dependencies": {
+        "hogan.js": ">=2.0.0"
     },
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "version": "0.5.2"
+    "devDependencies": {
+        "coffee-script": "1.x.x",
+        "colors": "0.6.x",
+        "supertest": "~0.8.0",
+        "cheerio": "~0.12.2",
+        "expect.js": "~0.2.0",
+        "express": "~3.4.0"
+    }
 }
 ```
 
